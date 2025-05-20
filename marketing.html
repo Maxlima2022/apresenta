@@ -35,11 +35,11 @@
         nav {
             text-align: center;
         }
-
-       .ticker {
+.ticker {
     font-size: 1.2vw;
     color: #ffffff;
-    animation: ticker 60s linear infinite; /* Aumentado para 35 segundos */
+    animation: ticker 60s linear forwards; /* Roda uma vez e para no final */
+    animation-iteration-count: 2;
     white-space: nowrap;
 }
 
