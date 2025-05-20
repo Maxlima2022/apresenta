@@ -19,7 +19,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 90vh;
+            min-height: 100vh;
         }
 
         header {
@@ -34,23 +34,19 @@
 
         nav {
             text-align: center;
+            overflow: hidden;
         }
 
         .ticker {
-    font-size: 1.5vw;
-    color: #ffffff;
-    animation: ticker 35s linear infinite; /* Aumentado para 35 segundos */
-    white-space: nowrap;
-}
-
+            font-size: 1.5vw;
+            color: #ffffff;
+            animation: ticker 35s linear infinite;
+            white-space: nowrap;
+        }
 
         @keyframes ticker {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
         }
 
         .content {
@@ -79,6 +75,7 @@
             font-size: 2vw;
             margin-bottom: 1vw;
             color: #00FFFF;
+            text-align: center;
         }
 
         .info-box img {
@@ -129,21 +126,13 @@
         }
 
         @keyframes heartbeat-dash {
-            0% {
-                stroke-dashoffset: 1000;
-            }
-            100% {
-                stroke-dashoffset: 0;
-            }
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
         }
 
         @keyframes glow {
-            from {
-                box-shadow: 0 0 10px #00ffff;
-            }
-            to {
-                box-shadow: 0 0 25px #00ffff;
-            }
+            from { box-shadow: 0 0 10px #00ffff; }
+            to { box-shadow: 0 0 25px #00ffff; }
         }
 
         footer {
@@ -174,7 +163,7 @@
             }
 
             .ticker {
-                font-size: 30vw;
+                font-size: 4vw;
             }
 
             footer {
@@ -196,9 +185,6 @@
             }
         }
 
-        nav {
-            color: #333;
-        }
     </style>
 </head>
 <body>
@@ -206,9 +192,8 @@
     <header>
         <nav>
             <div class="ticker">
-                📈 INTEGRANTES | DESENVOLVEDOR DO SISTEMA - JACKXWELL LIMA DA SILVA | DESENVOLVIMENTO DO TCC - JACKXWELL LIMA DA SILVA | DESENVOLVIMENTO DO MANUAL DO SISTEMA - JACKXWELL LIMA DA SILVA | DESENVOLVIMENTO DOCUMENTAL - JACKXWELL LIMA DA SILVA | ...
+                📈 INTEGRANTES | DESENVOLVEDOR DO SISTEMA - JACKXWELL LIMA DA SILVA | DESENVOLVIMENTO DO TCC - JACKXWELL LIMA DA SILVA | MANUAL DO SISTEMA - JACKXWELL LIMA DA SILVA | DOCUMENTAÇÃO - JACKXWELL LIMA DA SILVA |
             </div>
-            
         </nav>
     </header>
 
@@ -216,7 +201,6 @@
         <div class="info-box">
             <h1 id="titulo-info">TCC - Desenvolvimento de Sistema para Gerenciamento de Estoque Logístico</h1>
             <img src="ChatGPT Image 15_04_2025, 11_08_57.png" alt="Imagem do Curso Técnico em Logística">
-          
         </div>
 
         <div class="video-container">
@@ -240,7 +224,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Desenvolvido por Jackxwell</p>
+        <p>&copy; 2025 Desenvolvido por Jackxwell Lima da Silva</p>
     </footer>
 
     <script>
@@ -261,9 +245,10 @@
         // Troca automática a cada 8 segundos
         setInterval(mudarTitulo, 8000);
 
-        setInterval(function(){
-        location.reload(); // Recarrega a página a cada 50 segundos
-    }, 90000); // 10000 milissegundos = 1000 segundos
+        // Recarrega a página a cada 90 segundos (corrigido o comentário)
+        setInterval(() => {
+            location.reload();
+        }, 90000);
     </script>
 </body>
 </html>
