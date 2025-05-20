@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propaganda TCC</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c5b3b3;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        .ticker {
+            font-size: 1.2vw;
+            color: #ffffff;
+            animation: ticker 15s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes ticker {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 70px;
+            padding: 2vw;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            width: 100%;
+            gap: 2vw;
+        }
+
+        .info-box {
+            flex: 1 1 45%;
+            max-width: 45%;
+            background-color: #222;
+            padding: 3vw;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-box h1 {
+            font-size: 2vw;
+            margin-bottom: 1vw;
+            color: #00FFFF;
+        }
+
+        .info-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .video-container {
+            flex: 1 1 50%;
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .heartbeat-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto 0;
+            background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 0 15px #00ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: glow 2s infinite alternate;
+        }
+
+        .heartbeat {
+            width: 100%;
+            height: 100px;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: heartbeat-dash 2s linear infinite;
+        }
+
+        @keyframes heartbeat-dash {
+            0% {
+                stroke-dashoffset: 1000;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #00ffff;
+            }
+            to {
+                box-shadow: 0 0 25px #00ffff;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1vw;
+            background-color: #222;
+            color: #ffffff;
+            width: 100%;
+            margin-top: auto;
+            font-size: 1vw;
+        }
+
+        @media (max-width: 1024px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-box,
+            .video-container {
+                max-width: 90%;
+                flex: 1 1 100%;
+                margin-bottom: 2vw;
+            }
+
+            .info-box h1 {
+                font-size: 5vw;
+            }
+
+            .ticker {
+                font-size: 3vw;
+            }
+
+            footer {
+                font-size: 3vw;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .info-box h1 {
+                font-size: 1.8vw;
+            }
+
+            .ticker {
+                font-size: 1.9vw;
+            }
+
+            footer {
+                font-size: 1.2vw;
+            }
+        }
+
+        nav {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="ticker">
+                <span><h1>📈 INTEGRANTES | DESENVOLVEDOR DO SISTEMA - JACKXWEL LIMA DA SILVA | DESENVOLVIMENTO DO TCC - JACKXWELL LIMA DA SILVA | DESENVOLVIMENTO DO MANUAL DO SISTEMA - JACKXWELL LIMA DA SILVA | DESENVOLVIMENTO DOCUMENTAL - JACKXWELL LIMA DA SILVA | ...</h1></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="info-box">
+            <h1 id="titulo-info">TCC - Desenvolvimento de Sistema para Gerenciamento de Estoque Logístico</h1>
+            <img src="ChatGPT Image 15_04_2025, 11_08_57.png" alt="Imagem do Curso Técnico em Logística">
+          
+        </div>
+
+        <div class="video-container">
+            <video id="meuVideo" autoplay loop muted playsinline preload="auto">
+                <source src="Gen-3 Alpha Turbo 1122753287, Cropped - ChatGPT Im, M 5.mp4" type="video/mp4">
+                Seu navegador não suporta o vídeo.
+            </video>
+            
+            <div class="heartbeat-container">
+                <svg class="heartbeat" viewBox="0 0 500 100" preserveAspectRatio="none">
+                    <polyline 
+                        fill="none" 
+                        stroke="#00FFFF" 
+                        stroke-width="4" 
+                        points="0,50 20,50 30,10 40,90 50,50 80,50 90,30 100,70 110,50 140,50 150,10 160,90 170,50 200,50 210,30 220,70 230,50 260,50 270,10 280,90 290,50 320,50 330,30 340,70 350,50 380,50 390,10 400,90 410,50 440,50 460,50 480,50 500,50">
+                        <animate attributeName="stroke-dashoffset" values="1000;0" dur="2s" repeatCount="indefinite" />
+                    </polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Desenvolvido por Jackxwell</p>
+    </footer>
+
+    <script>
+        const titulos = [
+            "TCC - Desenvolvimento de Sistema para Gerenciamento de Estoque Logístico",
+            "Sistema Inovador para Controle de Estoque em Tempo Real",
+            "Projeto de TCC com Interface Responsiva e Funcional",
+            "Automatização do Estoque Logístico - Solução Completa"
+        ];
+
+        let indiceAtual = 0;
+
+        function mudarTitulo() {
+            indiceAtual = (indiceAtual + 1) % titulos.length;
+            document.getElementById("titulo-info").textContent = titulos[indiceAtual];
+        }
+
+        // Troca automática a cada 8 segundos
+        setInterval(mudarTitulo, 8000);
+
+        setInterval(function(){
+        location.reload(); // Recarrega a página a cada 50 segundos
+    }, 90000); // 10000 milissegundos = 1000 segundos
+    </script>
+</body>
+</html>
